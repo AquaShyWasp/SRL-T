@@ -6,6 +6,25 @@ Methods to interact with the bankscreen.
 
 ------------
 
+BankScreen.GetSlotBoxesFromTab
+~~~~~~~~~~~~~~~~~~~
+
+Gets the slot boxes independently of the scroll position
+within a tab area (BankScreen.GetTabAreas).
+
+For the top most "Tab area" the slots are aligned with their amount text.
+(See SRL.GetItemAmount(Area: TBox)) to see what I mean).
+
+
+
+------------
+
+    function GetAmountsTPA(Box: TBox): TPointArray;
+    returns a TPA containing the item amounts in the bank.
+  
+
+------------
+
 BankScreen.IsOpen
 ~~~~~~~~~~~~~~~~~
 .. code-block:: pascal

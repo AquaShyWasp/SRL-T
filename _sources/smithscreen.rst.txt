@@ -1,0 +1,73 @@
+
+SmithScreen
+==========
+Methods to interact with the smithscreen.
+
+
+------------
+
+SmithScreen.Setup
+~~~~~~~~~~~~~~~~
+.. code-block:: pascal
+
+ procedure SmithScreen.Setup;
+
+Initializes smithscreen variables.
+
+.. note:: This is automatically called on the **SmithScreen** variable.
+
+
+------------
+
+SmithScreen.GetTitle
+~~~~~~~~~~~~~~~~~~~
+.. code-block:: pascal
+
+ function TRSSmithScreen.GetTitle: String;
+
+Returns the title of the smithscreen.
+
+Example
+-------
+.. code-block:: pascal  
+
+  WriteLn SmithScreen.GetTitle();
+
+
+------------
+
+SmithScreen.IsOpen
+~~~~~~~~~~~~~~~~~
+.. code-block:: pascal
+
+ function TRSSmithScreen.IsOpen(WaitForItems: Boolean = True): Boolean;
+
+Returns true if the smithscreen is visible.
+
+
+------------
+
+SmithScreen.Close
+~~~~~~~~~~~~~~~~
+.. code-block:: pascal
+
+ function TRSSmithScreen.Close(UseKeyboard: Boolean = False): Boolean;
+
+Closes the smith screen, Depending on `UseKeyboard` the function will either click the button
+or press backspace.
+
+Example
+-------
+.. code-block:: pascal  
+
+ WriteLn SmithScreen.Close();
+
+
+------------
+
+var SmithScreen
+~~~~~~~~~~~~~~
+  Global smithscreen variable.
+
+
+------------

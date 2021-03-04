@@ -6,12 +6,16 @@ Welcome to SRL documentation!
 
 	:caption: OSR
 
-   bankscreen
-   mainscreen
-   mm2ms
-   misc
+   bank
+   grandexchange
    inventory
+   smithscreen
    rsclient
+   misc
+   mm2ms
+   bankscreen
+   login
+   mainscreen
 
 -----------
 
@@ -40,24 +44,24 @@ Welcome to SRL documentation!
 
 	:caption: UTILS
 
-   tcircle
+   string
    tpoint
-   trectangle
-   color
-   math
-   tbox
-   random
-   pixelshift
-   integerarrays
-   time
-   drawing
-   mouse
    extendedarrays
-   tboxarrays
    keyboard
    tpointarrays
-   string
+   tboxarrays
+   color
+   tbox
+   random
+   time
+   tcircle
+   math
    wrappers
+   trectangle
+   drawing
+   pixelshift
+   mouse
+   integerarrays
 
 -----------
 
