@@ -6,6 +6,14 @@ Methods to interact with the Bank.
 
 ------------
 
+This would be my purpose to handle bank tutorial button.
+In reality this could be messed up if the account has the "Deposit Inventory" and
+"Deposit Equipment" buttons hidden too but I think virtually nobody does that.
+Either way, we could also check each button size to be sure.
+
+
+------------
+
 Bank.IsOpen
 ~~~~~~~~~~~
 .. code-block:: pascal

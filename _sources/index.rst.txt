@@ -38,9 +38,7 @@ Welcome to SRL documentation!
    mm2ms
    rsclient
    login
-   smithscreen
    mainscreen
-   bankscreen
    bank
 
 -----------
