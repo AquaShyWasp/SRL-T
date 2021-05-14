@@ -6,24 +6,24 @@ Welcome to SRL documentation!
 
 	:caption: UTILS
 
-   tpointarrays
-   keyboard
-   extendedarrays
-   drawing
-   time
-   wrappers
    tboxarrays
-   mouse
-   trectangle
-   string
-   pixelshift
-   tbox
-   math
+   time
    tcircle
+   trectangle
+   mouse
+   math
    color
+   string
+   tpointarrays
+   extendedarrays
    random
+   wrappers
    integerarrays
+   tbox
+   keyboard
    tpoint
+   drawing
+   pixelshift
 
 -----------
 
@@ -32,14 +32,14 @@ Welcome to SRL documentation!
 
 	:caption: OSR
 
-   mainscreen
-   mm2ms
-   grandexchange
    bank
-   rsclient
+   mm2ms
    login
-   misc
+   grandexchange
+   mainscreen
+   rsclient
    inventory
+   misc
 
 -----------
 
@@ -48,8 +48,8 @@ Welcome to SRL documentation!
 
 	:caption: OSR -> WALKER
 
-   walker
    webber
+   walker
    webgraph
 
 -----------
