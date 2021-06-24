@@ -18,7 +18,6 @@ Welcome to SRL documentation!
 	:caption: OSR
 
    login
-   interface
    bank
    grandexchange
    inventory
