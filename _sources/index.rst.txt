@@ -37,6 +37,7 @@ Welcome to SRL documentation!
    mm2ms
    rsclient
    misc
+   prayer
    grandexchange
    login
    inventory

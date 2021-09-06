@@ -1,0 +1,355 @@
+
+Prayer
+=======
+Methods to handle Prayer and QuickPrayer.
+
+
+------------
+
+Prayer.Setup
+~~~~~~~~~~~~
+.. code-block:: pascal
+
+ procedure Prayer.Setup;
+
+Initializes Prayer variables.
+
+.. note:: This is automatically called on the **Prayer** variable.
+
+
+------------
+
+Prayer.GetPrayerLevel
+~~~~~~~~~~~~~~~~~~~~~~
+.. code-block:: pascal
+
+ function Prayer.GetPrayerLevel: Int32;
+
+**Prayer.GetPrayerLevel** is used to retrieve the prayer level from the prayer tab.
+
+Example
+-------
+.. code-block:: pascal  
+
+  Writeln Prayer.GetPrayerLevel;
+
+
+------------
+
+Prayer.IsOpen
+~~~~~~~~~~~~~~~~~~~~~~
+.. code-block:: pascal
+
+ function Prayer.IsOpen: Boolean;
+
+Returns true if the Prayer tab is open.
+
+
+------------
+
+Prayer.Open
+~~~~~~~~~~~~~~~~~~~~~~
+.. code-block:: pascal
+
+ function Prayer.Open: Boolean;
+
+Attempts to open the prayer tab.
+
+
+------------
+
+Prayer.GetPrayerBoxes
+~~~~~~~~~~~~~~~~~~~~~
+.. code-block:: pascal
+
+ function Prayer.GetPrayerBoxes: TBoxArray;
+.. code-block:: pascal
+
+ function Prayer.GetPrayerBoxes(Prayers: array of ERSPrayer): TBoxArray; overload;
+
+Internal function to get the bounds of all or the specified prayers.
+
+
+------------
+
+Prayer.GetPrayerBox
+~~~~~~~~~~~~~~~~~~~~~
+.. code-block:: pascal
+
+ function Prayer.GetPrayerBox(Prayer: ERSPrayer): TBox;
+
+Internal function to get the bounds of a single prayer.
+
+
+------------
+
+Prayer.PointToPrayer
+~~~~~~~~~~~~~~~~~~~~~
+.. code-block:: pascal
+
+ function Prayer.PointToPrayer(P: TPoint): Int32;
+
+Returns the prayer number that **P** is part of.
+-1 is returned if there's no result.
+
+Example
+-------
+.. code-block:: pascal  
+
+  WriteLn('Mouse is hovering prayer ', Prayer.PointToPrayer(Mouse.Position));
+
+
+------------
+
+Prayer.MouseOver
+~~~~~~~~~~~~~~~~~~~~~
+.. code-block:: pascal
+
+ function Prayer.MouseOver(Prayer: ERSPrayer): Boolean;
+
+Hovers the specified prayer.
+
+Example
+-------
+.. code-block:: pascal  
+
+  Prayer.MouseOver(ERSPrayer.PROTECT_FROM_MELEE);
+
+
+------------
+
+Prayer.CanActivate
+~~~~~~~~~~~~~~~~~~~~~
+.. code-block:: pascal
+
+ function Prayer.CanActivate(Prayer: ERSPrayer): Boolean;
+
+Returns true if we have enough level and have unlocked the specified prayer.
+
+Example
+-------
+.. code-block:: pascal  
+
+  WriteLn Prayer.CanActivate(ERSPrayer.PROTECT_FROM_MELEE);
+
+
+------------
+
+Prayer.GetAvailablePrayers
+~~~~~~~~~~~~~~~~~~~~~
+.. code-block:: pascal
+
+ function Prayer.GetAvailablePrayers: array of ERSPrayer;
+
+Returns an array of all available prayers.
+
+
+------------
+
+Prayer.IsPrayerActive
+~~~~~~~~~~~~~~~~~~~~~
+.. code-block:: pascal
+
+ function Prayer.IsPrayerActive(Prayer: ERSPrayer): Boolean;
+
+Returns true if the specified prayer is active right now.
+
+Example
+-------
+.. code-block:: pascal  
+
+  WriteLn Prayer.IsPrayerActive(ERSPrayer.SMITE);
+
+
+------------
+
+Prayer.GetActivePrayers
+~~~~~~~~~~~~~~~~~~~~~
+.. code-block:: pascal
+
+ function Prayer.GetActivePrayers: array of ERSPrayer;
+
+Returns an array of all active prayers.
+
+
+------------
+
+Prayer.PrayerActive
+~~~~~~~~~~~~~~~~~~~~~
+.. code-block:: pascal
+
+ function Prayer.PrayerActive: Boolean;
+
+Returns true if any prayer is active.
+
+
+------------
+
+Prayer.ActivatePrayer
+~~~~~~~~~~~~~~~~~~~~~
+.. code-block:: pascal
+
+ function Prayer.ActivatePrayer(Prayer: ERSPrayer): Boolean;
+
+Attempts to activate the specified prayer.
+
+Example
+-------
+.. code-block:: pascal  
+
+  Prayer.ActivatePrayer(ERSPrayer.PROTECT_FROM_MELEE);
+
+
+------------
+
+Prayer.ActivatePrayer
+~~~~~~~~~~~~~~~~~~~~~
+.. code-block:: pascal
+
+ function Prayer.ActivatePrayer(Prayers: array of ERSPrayer): Boolean; overload;
+
+Attempts to activate the several prayers.
+
+Example
+-------
+.. code-block:: pascal  
+
+  Prayer.ActivatePrayer([ERSPrayer.PROTECT_FROM_MELEE, ERSPrayer.PIETY]);
+
+
+------------
+
+var Prayer
+~~~~~~~~~~
+  Global Prayer variable.
+
+
+------------
+
+QuickPrayer.Setup
+~~~~~~~~~~~~~~~~~
+.. code-block:: pascal
+
+ procedure QuickPrayer.Setup;
+
+Initializes QuickPrayer variables.
+
+.. note:: This is automatically called on the **QuickPrayer** variable.
+
+
+------------
+
+var QuickPrayer
+~~~~~~~~~~
+  Global QuickPrayer variable.
+
+
+------------
+
+Minimap
+=======
+Methods to handle the minimap prayer orb.
+
+
+------------
+
+Minimap.GetPrayerLevel
+~~~~~~~~~~~~~~~~~~~~~~
+.. code-block:: pascal
+
+ function TRSMinimap.GetPrayerLevel: Int32;
+
+**Minimap.GetPrayerLevel** is used to retrieve the prayer level from the minimap orb.
+
+Example
+-------
+.. code-block:: pascal  
+
+  Writeln Minimap.GetPrayerLevel;
+
+
+------------
+
+Minimap.IsPrayerEnabled
+~~~~~~~~~~~~~~~~~~~~~~
+.. code-block:: pascal
+
+ function TRSMinimap.IsPrayerEnabled: Boolean;
+
+**Minimap.IsPrayerEnabled** is used to retrieve the quick prayer state (enabled or disabled).
+
+Example
+-------
+.. code-block:: pascal  
+
+  Writeln Minimap.IsPrayerEnabled;
+
+
+------------
+
+Minimap.EnablePrayer
+~~~~~~~~~~~~~~~~~~~~
+.. code-block:: pascal
+
+ function TRSMinimap.EnablePrayer: Boolean;
+
+**Minimap.EnablePrayer** is used to enable quick prayers.
+
+Example
+-------
+.. code-block:: pascal  
+
+  Minimap.EnablePrayer;
+
+
+------------
+
+Minimap.DisablePrayer
+~~~~~~~~~~~~~~~~~~~~~
+.. code-block:: pascal
+
+ function TRSMinimap.DisablePrayer: Boolean;
+
+**Minimap.DisablePrayer** is used to disable quick prayers.
+
+Example
+-------
+.. code-block:: pascal  
+
+  Minimap.DisablePrayer;
+
+
+------------
+
+Prayer.Open
+~~~~~~~~~~~
+.. code-block:: pascal
+
+ function TRSPrayer.Open: Boolean; override;
+
+Overrides **Prayer.Open** to handle quick prayers if they are open.
+
+
+------------
+
+Prayer.CanActivate
+~~~~~~~~~~~~~~~~~~
+.. code-block:: pascal
+
+ function TRSPrayer.CanActivate(Prayer: ERSPrayer): Boolean; override;
+
+Overrides **Prayer.CanActivate** to handle quick prayers.
+
+
+------------
+
+Prayer.GetAvailablePrayers
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. code-block:: pascal
+
+ function TRSPrayer.GetAvailablePrayers: array of ERSPrayer; override;
+
+Overrides **Prayer.GetAvailablePrayers** to handle quick prayers.
+
+
+------------
