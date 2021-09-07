@@ -32,6 +32,7 @@ Welcome to SRL documentation!
 
 	:caption: OSR
 
+   magic
    mainscreen
    bank
    mm2ms
@@ -39,7 +40,10 @@ Welcome to SRL documentation!
    misc
    prayer
    grandexchange
+   antiban
    login
+   combat
+   chat
    inventory
 
 -----------
