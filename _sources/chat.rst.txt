@@ -55,8 +55,6 @@ Example
 -------
 .. code-block:: pascal  
 
-.. code-block:: pascal
-
   WriteLn('The user name is: ', Chat.GetDisplayName);
 
 
@@ -73,8 +71,6 @@ Returns true if the chat box is in transparent mode.
 Example
 -------
 .. code-block:: pascal  
-
-.. code-block:: pascal
 
   WriteLn Chat.IsTransparent;
 
@@ -93,8 +89,6 @@ Example
 -------
 .. code-block:: pascal  
 
-.. code-block:: pascal
-
   WriteLn Chat.IsOpen;
 
 
@@ -111,8 +105,6 @@ Returns the query question.
 Example
 -------
 .. code-block:: pascal  
-
-.. code-block:: pascal
 
   WriteLn Chat.GetQuery;
 
@@ -131,8 +123,6 @@ Example
 -------
 .. code-block:: pascal  
 
-.. code-block:: pascal
-
   WriteLn Chat.GetQueryAnswer;
 
 
@@ -150,8 +140,6 @@ Example
 -------
 .. code-block:: pascal  
 
-.. code-block:: pascal
-
   WriteLn Chat.FindQuery('How many doses', 2000); //Example query of NMZ Potion Barrels.
 
 
@@ -168,8 +156,6 @@ Replies with **Answer** to the specified **Query**.
 Example
 -------
 .. code-block:: pascal  
-
-.. code-block:: pascal
 
   Chat.AnswerQuery('How many doses', '20', 2000); //Example query of NMZ Potion Barrels.
 
@@ -199,8 +185,6 @@ Example
 -------
 .. code-block:: pascal  
 
-.. code-block:: pascal
-
   Chat.FindOption('Yes'); //Common chat option in several instances as an example where you are asked Yes or No.
 
 
@@ -217,8 +201,6 @@ Attempts to click the specied chat option. If **UseKeyboard** is true, the keybo
 Example
 -------
 .. code-block:: pascal  
-
-.. code-block:: pascal
 
   Chat.ClickOption('Yes', True); //Common chat option in several instances as an example where you are asked Yes or No.
 
@@ -237,8 +219,6 @@ Example
 -------
 .. code-block:: pascal  
 
-.. code-block:: pascal
-
   Chat.ClickContinue(True);
 
 
@@ -255,8 +235,6 @@ Continuously advances the chat with **TRSChat.ClickContinue** until the specifie
 Example
 -------
 .. code-block:: pascal  
-
-.. code-block:: pascal
 
   Chat.ChatToOption('Yes');
 
@@ -275,8 +253,6 @@ Example
 -------
 .. code-block:: pascal  
 
-.. code-block:: pascal
-
   WriteLn Chat.GetMessage(5);
 
 
@@ -293,8 +269,6 @@ Returns true if **Message** is found in any chat line.
 Example
 -------
 .. code-block:: pascal  
-
-.. code-block:: pascal
 
   WriteLn Chat.FindMessage('Buying gf');
 
@@ -313,8 +287,6 @@ Example
 -------
 .. code-block:: pascal  
 
-.. code-block:: pascal
-
   WriteLn Chat.GetChat;
 
 
@@ -331,8 +303,6 @@ Returns the chat title if available. This is usually a red text and sometimes ha
 Example
 -------
 .. code-block:: pascal  
-
-.. code-block:: pascal
 
   if 'Select an Option' = Chat.GetChatTitle then
     Chat.ClickOption('access my bank');
@@ -351,8 +321,6 @@ Returns true if we have the level up message on the chat box.
 Example
 -------
 .. code-block:: pascal  
-
-.. code-block:: pascal
 
   if Chat.LeveledUp then
     Chat.ClickContinue(True);

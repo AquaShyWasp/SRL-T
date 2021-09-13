@@ -44,8 +44,6 @@ Example
 -------
 .. code-block:: pascal  
 
-.. code-block:: pascal
-
   WriteLn Combat.IsOpen;
 
 
@@ -62,8 +60,6 @@ Attempts to open the combat tab.
 Example
 -------
 .. code-block:: pascal  
-
-.. code-block:: pascal
 
   Combat.Open;
 
@@ -93,8 +89,6 @@ Example
 -------
 .. code-block:: pascal  
 
-.. code-block:: pascal
-
   WriteLn('The current combat style is: ', Combat.GetCombatStyle);
 
 
@@ -112,8 +106,6 @@ Set the attack style to the **Style** specified.
 Example
 -------
 .. code-block:: pascal  
-
-.. code-block:: pascal
 
   Combat.SetCombatStyle(COMBAT_STYLE_SLASH);
 
@@ -133,8 +125,6 @@ Example
 -------
 .. code-block:: pascal  
 
-.. code-block:: pascal
-
   WriteLn Combat.GetAutoRetaliate;
 
 
@@ -152,8 +142,6 @@ Set the state of auto retaliate on or off.
 Example
 -------
 .. code-block:: pascal  
-
-.. code-block:: pascal
 
   Combat.SetAutoRetaliate(True);
 
@@ -173,8 +161,6 @@ Example
 -------
 .. code-block:: pascal  
 
-.. code-block:: pascal
-
   WriteLn('The current weapon is: ', Combat.GetWeapon);
 
 
@@ -193,8 +179,6 @@ Example
 -------
 .. code-block:: pascal  
 
-.. code-block:: pascal
-
   WriteLn('Current combat level is: ', Combat.GetCombatLevel);
 
 
@@ -204,6 +188,99 @@ Example
 var Combat
 ~~~~~~~~~~
   Global Combat variable.
+
+
+------------
+
+Minimap
+=======
+Methods to handle the minimap special attack orb.
+
+
+------------
+
+Minimap.GetSpecLevel
+~~~~~~~~~~~~~~~~~~~~
+.. code-block:: pascal
+
+ procedure TRSMinimap.GetSpecLevel: Int32;
+
+**Minimap.GetSpecLevel** is used to retrieve the special attack level from the minimap orb.
+
+Example
+-------
+.. code-block:: pascal  
+
+  Writeln Minimap.GetSpecLevel;
+
+
+------------
+
+Minimap.IsSpecEnabled
+~~~~~~~~~~~~~~~~~~~~~
+.. code-block:: pascal
+
+ function TRSMinimap.IsSpecEnabled;
+
+**Minimap.IsSpecEnabled** returns true if the special attack is enabled.
+
+Example
+-------
+.. code-block:: pascal  
+
+  Writeln Minimap.IsSpecEnabled;
+
+
+------------
+
+Minimap.IsSpecWeapon
+~~~~~~~~~~~~~~~~~~~~
+.. code-block:: pascal
+
+ function TRSMinimap.IsSpecWeapon;
+
+**Minimap.IsSpecWeapon** returns true if the current weapon has a special attack.
+Returns false if the special attack level is at 0 or if the weapon doesn't have a special attack.
+
+Example
+-------
+.. code-block:: pascal  
+
+  Writeln Minimap.IsSpecWeapon;
+
+
+------------
+
+Minimap.EnableSpec
+~~~~~~~~~~~~~~~~~~
+.. code-block:: pascal
+
+ function TRSMinimap.EnableSpec(MinSpec: Int32): Boolean;
+
+**Minimap.EnableSpec** attempts to enable the special attack if we have at leas **MinSpec** special attack level.
+
+Example
+-------
+.. code-block:: pascal  
+
+  Minimap.EnableSpec(25);
+
+
+------------
+
+Minimap.DisableSpec
+~~~~~~~~~~~~~~~~~~~
+.. code-block:: pascal
+
+ function TRSMinimap.DisableSpec;
+
+**Minimap.DisableSpec** attempts to disable the special attack.
+
+Example
+-------
+.. code-block:: pascal  
+
+  Minimap.DisableSpec;
 
 
 ------------

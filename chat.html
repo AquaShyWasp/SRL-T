@@ -121,6 +121,7 @@
 <li class="toctree-l1"><a class="reference internal" href="antiban.html">Antiban</a></li>
 <li class="toctree-l1"><a class="reference internal" href="login.html">Login</a></li>
 <li class="toctree-l1"><a class="reference internal" href="combat.html">Combat</a></li>
+<li class="toctree-l1"><a class="reference internal" href="combat.html#minimap">Minimap</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Chat</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#chat-setup">Chat.Setup</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#chat-setupalignment">Chat.SetupAlignment</a></li>
@@ -265,9 +266,6 @@
 <p>Get the user displayed name.</p>
 <section id="example">
 <h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
 <div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span><span class="nb">WriteLn</span><span class="p">(</span><span class="s">&#39;The user name is: &#39;</span><span class="o">,</span> <span class="n">Chat</span><span class="o">.</span><span class="n">GetDisplayName</span><span class="p">)</span><span class="o">;</span>
 </pre></div>
 </div>
@@ -282,9 +280,6 @@
 <p>Returns true if the chat box is in transparent mode.</p>
 <section id="id1">
 <h3>Example<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
 <div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span><span class="nb">WriteLn</span> <span class="n">Chat</span><span class="o">.</span><span class="n">IsTransparent</span><span class="o">;</span>
 </pre></div>
 </div>
@@ -299,9 +294,6 @@
 <p>Returns true if the chat box is open.</p>
 <section id="id2">
 <h3>Example<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
 <div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span><span class="nb">WriteLn</span> <span class="n">Chat</span><span class="o">.</span><span class="n">IsOpen</span><span class="o">;</span>
 </pre></div>
 </div>
@@ -316,9 +308,6 @@
 <p>Returns the query question.</p>
 <section id="id3">
 <h3>Example<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
 <div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span><span class="nb">WriteLn</span> <span class="n">Chat</span><span class="o">.</span><span class="n">GetQuery</span><span class="o">;</span>
 </pre></div>
 </div>
@@ -333,9 +322,6 @@
 <p>Returns the currently typed answer.</p>
 <section id="id4">
 <h3>Example<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
 <div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span><span class="nb">WriteLn</span> <span class="n">Chat</span><span class="o">.</span><span class="n">GetQueryAnswer</span><span class="o">;</span>
 </pre></div>
 </div>
@@ -350,9 +336,6 @@
 <p>Returns true if the specified <strong>Query</strong> is currently open or opens up within <strong>WaitTime</strong>.</p>
 <section id="id5">
 <h3>Example<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
 <div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span><span class="nb">WriteLn</span> <span class="n">Chat</span><span class="o">.</span><span class="n">FindQuery</span><span class="p">(</span><span class="s">&#39;How many doses&#39;</span><span class="o">,</span> <span class="mi">2000</span><span class="p">)</span><span class="o">;</span> <span class="c1">//Example query of NMZ Potion Barrels.</span>
 </pre></div>
 </div>
@@ -367,9 +350,6 @@
 <p>Replies with <strong>Answer</strong> to the specified <strong>Query</strong>.</p>
 <section id="id6">
 <h3>Example<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
 <div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span><span class="n">Chat</span><span class="o">.</span><span class="n">AnswerQuery</span><span class="p">(</span><span class="s">&#39;How many doses&#39;</span><span class="o">,</span> <span class="s">&#39;20&#39;</span><span class="o">,</span> <span class="mi">2000</span><span class="p">)</span><span class="o">;</span> <span class="c1">//Example query of NMZ Potion Barrels.</span>
 </pre></div>
 </div>
@@ -392,9 +372,6 @@
 <p>Returns true if the specified <strong>Text</strong> is an available option.</p>
 <section id="id7">
 <h3>Example<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
 <div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span><span class="n">Chat</span><span class="o">.</span><span class="n">FindOption</span><span class="p">(</span><span class="s">&#39;Yes&#39;</span><span class="p">)</span><span class="o">;</span> <span class="c1">//Common chat option in several instances as an example where you are asked Yes or No.</span>
 </pre></div>
 </div>
@@ -409,9 +386,6 @@
 <p>Attempts to click the specied chat option. If <strong>UseKeyboard</strong> is true, the keyboard will be used.</p>
 <section id="id8">
 <h3>Example<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
 <div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span><span class="n">Chat</span><span class="o">.</span><span class="n">ClickOption</span><span class="p">(</span><span class="s">&#39;Yes&#39;</span><span class="o">,</span> <span class="k">True</span><span class="p">)</span><span class="o">;</span> <span class="c1">//Common chat option in several instances as an example where you are asked Yes or No.</span>
 </pre></div>
 </div>
@@ -426,9 +400,6 @@
 <p>Attempts to click the continue chat option. If <strong>UseKeyboard</strong> is true, the keyboard will be used.</p>
 <section id="id9">
 <h3>Example<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
 <div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span><span class="n">Chat</span><span class="o">.</span><span class="n">ClickContinue</span><span class="p">(</span><span class="k">True</span><span class="p">)</span><span class="o">;</span>
 </pre></div>
 </div>
@@ -443,9 +414,6 @@
 <p>Continuously advances the chat with <strong>TRSChat.ClickContinue</strong> until the specified <strong>Option</strong> appears.</p>
 <section id="id10">
 <h3>Example<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
 <div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span><span class="n">Chat</span><span class="o">.</span><span class="n">ChatToOption</span><span class="p">(</span><span class="s">&#39;Yes&#39;</span><span class="p">)</span><span class="o">;</span>
 </pre></div>
 </div>
@@ -460,9 +428,6 @@
 <p>Get the message in the specified <strong>Line</strong>.</p>
 <section id="id11">
 <h3>Example<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
 <div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span><span class="nb">WriteLn</span> <span class="n">Chat</span><span class="o">.</span><span class="n">GetMessage</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="o">;</span>
 </pre></div>
 </div>
@@ -477,9 +442,6 @@
 <p>Returns true if <strong>Message</strong> is found in any chat line.</p>
 <section id="id12">
 <h3>Example<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
 <div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span><span class="nb">WriteLn</span> <span class="n">Chat</span><span class="o">.</span><span class="n">FindMessage</span><span class="p">(</span><span class="s">&#39;Buying gf&#39;</span><span class="p">)</span><span class="o">;</span>
 </pre></div>
 </div>
@@ -494,9 +456,6 @@
 <p>Returns the message displayed in a chat when we are talking with an NPC or interacting with something.</p>
 <section id="id13">
 <h3>Example<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
 <div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span><span class="nb">WriteLn</span> <span class="n">Chat</span><span class="o">.</span><span class="n">GetChat</span><span class="o">;</span>
 </pre></div>
 </div>
@@ -511,9 +470,6 @@
 <p>Returns the chat title if available. This is usually a red text and sometimes has 2 swords pointing to it.</p>
 <section id="id14">
 <h3>Example<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
 <div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="s">&#39;Select an Option&#39;</span> <span class="o">=</span> <span class="n">Chat</span><span class="o">.</span><span class="n">GetChatTitle</span> <span class="k">then</span>
   <span class="n">Chat</span><span class="o">.</span><span class="n">ClickOption</span><span class="p">(</span><span class="s">&#39;access my bank&#39;</span><span class="p">)</span><span class="o">;</span>
 </pre></div>
@@ -529,9 +485,6 @@
 <p>Returns true if we have the level up message on the chat box.</p>
 <section id="id15">
 <h3>Example<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
 <div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">Chat</span><span class="o">.</span><span class="n">LeveledUp</span> <span class="k">then</span>
   <span class="n">Chat</span><span class="o">.</span><span class="n">ClickContinue</span><span class="p">(</span><span class="k">True</span><span class="p">)</span><span class="o">;</span>
 </pre></div>

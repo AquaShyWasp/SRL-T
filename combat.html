@@ -135,6 +135,14 @@
 <li class="toctree-l2"><a class="reference internal" href="#var-combat">var Combat</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="#minimap">Minimap</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#minimap-getspeclevel">Minimap.GetSpecLevel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#minimap-isspecenabled">Minimap.IsSpecEnabled</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#minimap-isspecweapon">Minimap.IsSpecWeapon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#minimap-enablespec">Minimap.EnableSpec</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#minimap-disablespec">Minimap.DisableSpec</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="chat.html">Chat</a></li>
 <li class="toctree-l1"><a class="reference internal" href="inventory.html">Inventory</a></li>
 </ul>
@@ -248,9 +256,6 @@
 <p>Returns true if the combat tab is open.</p>
 <section id="example">
 <h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
 <div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span><span class="nb">WriteLn</span> <span class="n">Combat</span><span class="o">.</span><span class="n">IsOpen</span><span class="o">;</span>
 </pre></div>
 </div>
@@ -265,9 +270,6 @@
 <p>Attempts to open the combat tab.</p>
 <section id="id1">
 <h3>Example<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
 <div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span><span class="n">Combat</span><span class="o">.</span><span class="n">Open</span><span class="o">;</span>
 </pre></div>
 </div>
@@ -290,9 +292,6 @@
 <p>Get the current attack style.</p>
 <section id="id2">
 <h3>Example<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
 <div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span><span class="nb">WriteLn</span><span class="p">(</span><span class="s">&#39;The current combat style is: &#39;</span><span class="o">,</span> <span class="n">Combat</span><span class="o">.</span><span class="n">GetCombatStyle</span><span class="p">)</span><span class="o">;</span>
 </pre></div>
 </div>
@@ -307,9 +306,6 @@
 <p>Set the attack style to the <strong>Style</strong> specified.</p>
 <section id="id3">
 <h3>Example<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
 <div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span><span class="n">Combat</span><span class="o">.</span><span class="n">SetCombatStyle</span><span class="p">(</span><span class="n">COMBAT_STYLE_SLASH</span><span class="p">)</span><span class="o">;</span>
 </pre></div>
 </div>
@@ -324,9 +320,6 @@
 <p>Get the current state of auto retaliate.</p>
 <section id="id4">
 <h3>Example<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
 <div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span><span class="nb">WriteLn</span> <span class="n">Combat</span><span class="o">.</span><span class="n">GetAutoRetaliate</span><span class="o">;</span>
 </pre></div>
 </div>
@@ -341,9 +334,6 @@
 <p>Set the state of auto retaliate on or off.</p>
 <section id="id5">
 <h3>Example<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
 <div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span><span class="n">Combat</span><span class="o">.</span><span class="n">SetAutoRetaliate</span><span class="p">(</span><span class="k">True</span><span class="p">)</span><span class="o">;</span>
 </pre></div>
 </div>
@@ -358,9 +348,6 @@
 <p>Get the name of the current worn weapon.</p>
 <section id="id6">
 <h3>Example<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
 <div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span><span class="nb">WriteLn</span><span class="p">(</span><span class="s">&#39;The current weapon is: &#39;</span><span class="o">,</span> <span class="n">Combat</span><span class="o">.</span><span class="n">GetWeapon</span><span class="p">)</span><span class="o">;</span>
 </pre></div>
 </div>
@@ -375,9 +362,6 @@
 <p>Get the current combat level.</p>
 <section id="id7">
 <h3>Example<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
 <div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span><span class="nb">WriteLn</span><span class="p">(</span><span class="s">&#39;Current combat level is: &#39;</span><span class="o">,</span> <span class="n">Combat</span><span class="o">.</span><span class="n">GetCombatLevel</span><span class="p">)</span><span class="o">;</span>
 </pre></div>
 </div>
@@ -389,7 +373,83 @@
 <blockquote>
 <div><p>Global Combat variable.</p>
 </div></blockquote>
+</section>
+</section>
 <hr class="docutils" />
+<section id="minimap">
+<h1>Minimap<a class="headerlink" href="#minimap" title="Permalink to this headline">¶</a></h1>
+<p>Methods to handle the minimap special attack orb.</p>
+<hr class="docutils" />
+<section id="minimap-getspeclevel">
+<h2>Minimap.GetSpecLevel<a class="headerlink" href="#minimap-getspeclevel" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span><span class="k">procedure</span> <span class="nc">TRSMinimap</span><span class="o">.</span><span class="nf">GetSpecLevel</span><span class="o">:</span> <span class="n">Int32</span><span class="o">;</span>
+</pre></div>
+</div>
+<p><strong>Minimap.GetSpecLevel</strong> is used to retrieve the special attack level from the minimap orb.</p>
+<section id="id8">
+<h3>Example<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span><span class="nb">Writeln</span> <span class="n">Minimap</span><span class="o">.</span><span class="n">GetSpecLevel</span><span class="o">;</span>
+</pre></div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="minimap-isspecenabled">
+<h2>Minimap.IsSpecEnabled<a class="headerlink" href="#minimap-isspecenabled" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span><span class="k">function</span> <span class="nc">TRSMinimap</span><span class="o">.</span><span class="nf">IsSpecEnabled</span><span class="o">;</span>
+</pre></div>
+</div>
+<p><strong>Minimap.IsSpecEnabled</strong> returns true if the special attack is enabled.</p>
+<section id="id9">
+<h3>Example<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span><span class="nb">Writeln</span> <span class="n">Minimap</span><span class="o">.</span><span class="n">IsSpecEnabled</span><span class="o">;</span>
+</pre></div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="minimap-isspecweapon">
+<h2>Minimap.IsSpecWeapon<a class="headerlink" href="#minimap-isspecweapon" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span><span class="k">function</span> <span class="nc">TRSMinimap</span><span class="o">.</span><span class="nf">IsSpecWeapon</span><span class="o">;</span>
+</pre></div>
+</div>
+<p><strong>Minimap.IsSpecWeapon</strong> returns true if the current weapon has a special attack.
+Returns false if the special attack level is at 0 or if the weapon doesn’t have a special attack.</p>
+<section id="id10">
+<h3>Example<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span><span class="nb">Writeln</span> <span class="n">Minimap</span><span class="o">.</span><span class="n">IsSpecWeapon</span><span class="o">;</span>
+</pre></div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="minimap-enablespec">
+<h2>Minimap.EnableSpec<a class="headerlink" href="#minimap-enablespec" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span><span class="k">function</span> <span class="nc">TRSMinimap</span><span class="o">.</span><span class="nf">EnableSpec</span><span class="p">(</span><span class="n">MinSpec</span><span class="o">:</span> <span class="n">Int32</span><span class="p">)</span><span class="o">:</span> <span class="kt">Boolean</span><span class="o">;</span>
+</pre></div>
+</div>
+<p><strong>Minimap.EnableSpec</strong> attempts to enable the special attack if we have at leas <strong>MinSpec</strong> special attack level.</p>
+<section id="id11">
+<h3>Example<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span><span class="n">Minimap</span><span class="o">.</span><span class="n">EnableSpec</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span><span class="o">;</span>
+</pre></div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="minimap-disablespec">
+<h2>Minimap.DisableSpec<a class="headerlink" href="#minimap-disablespec" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span><span class="k">function</span> <span class="nc">TRSMinimap</span><span class="o">.</span><span class="nf">DisableSpec</span><span class="o">;</span>
+</pre></div>
+</div>
+<p><strong>Minimap.DisableSpec</strong> attempts to disable the special attack.</p>
+<section id="id12">
+<h3>Example<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span><span class="n">Minimap</span><span class="o">.</span><span class="n">DisableSpec</span><span class="o">;</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+</section>
 </section>
 </section>
 
