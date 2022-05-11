@@ -44,8 +44,6 @@ Example
 -------
 .. code-block:: pascal  
 
-.. code-block:: pascal
-
   Writeln Prayer.GetPrayerLevel;
 
 
@@ -73,8 +71,6 @@ Attempts to open the prayer tab.
 Example
 -------
 .. code-block:: pascal  
-
-.. code-block:: pascal
 
   Prayer.Open;
 
@@ -119,8 +115,6 @@ Example
 -------
 .. code-block:: pascal  
 
-.. code-block:: pascal
-
   WriteLn('Mouse is hovering prayer ', Prayer.PointToPrayer(Mouse.Position));
 
 
@@ -138,8 +132,6 @@ Example
 -------
 .. code-block:: pascal  
 
-.. code-block:: pascal
-
   Prayer.MouseOver(ERSPrayer.PROTECT_FROM_MELEE);
 
 
@@ -156,8 +148,6 @@ Returns true if we have enough level and have unlocked the specified prayer.
 Example
 -------
 .. code-block:: pascal  
-
-.. code-block:: pascal
 
   WriteLn Prayer.CanActivate(ERSPrayer.PROTECT_FROM_MELEE);
 
@@ -186,8 +176,6 @@ Returns true if the specified prayer is active right now.
 Example
 -------
 .. code-block:: pascal  
-
-.. code-block:: pascal
 
   WriteLn Prayer.IsPrayerActive(ERSPrayer.SMITE);
 
@@ -228,8 +216,6 @@ Example
 -------
 .. code-block:: pascal  
 
-.. code-block:: pascal
-
   Prayer.ActivatePrayer(ERSPrayer.PROTECT_FROM_MELEE);
 
 
@@ -246,8 +232,6 @@ Attempts to activate the several prayers.
 Example
 -------
 .. code-block:: pascal  
-
-.. code-block:: pascal
 
   Prayer.ActivatePrayer([ERSPrayer.PROTECT_FROM_MELEE, ERSPrayer.PIETY]);
 
@@ -313,8 +297,6 @@ Example
 -------
 .. code-block:: pascal  
 
-.. code-block:: pascal
-
   QuickPrayer.Open;
 
 
@@ -343,8 +325,6 @@ Example
 -------
 .. code-block:: pascal  
 
-.. code-block:: pascal
-
   QuickPrayers.Close;
 
 
@@ -362,8 +342,6 @@ Example
 -------
 .. code-block:: pascal  
 
-.. code-block:: pascal
-
   WriteLn QuickPrayers.IsPrayerSelected(ERSPrayer.PROTECT_FROM_MAGIC);
 
 
@@ -380,8 +358,6 @@ Returns an array of all selected quick prayers
 Example
 -------
 .. code-block:: pascal  
-
-.. code-block:: pascal
 
   WriteLn QuickPrayers.GetSelectedPrayers;
 
@@ -402,8 +378,6 @@ Attempts to select the specified quick prayer/prayers.
 Example
 -------
 .. code-block:: pascal  
-
-.. code-block:: pascal
 
   QuickPrayers.SelectPrayer(ERSPrayer.PROTECT_ITEM);
 
@@ -436,8 +410,6 @@ Example
 -------
 .. code-block:: pascal  
 
-.. code-block:: pascal
-
   Writeln Minimap.GetPrayerLevel;
 
 
@@ -454,8 +426,6 @@ Minimap.IsPrayerEnabled
 Example
 -------
 .. code-block:: pascal  
-
-.. code-block:: pascal
 
   Writeln Minimap.IsPrayerEnabled;
 
@@ -474,8 +444,6 @@ Example
 -------
 .. code-block:: pascal  
 
-.. code-block:: pascal
-
   Minimap.EnablePrayer;
 
 
@@ -492,8 +460,6 @@ Minimap.DisablePrayer
 Example
 -------
 .. code-block:: pascal  
-
-.. code-block:: pascal
 
   Minimap.DisablePrayer;
 

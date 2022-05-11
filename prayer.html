@@ -183,9 +183,6 @@
 <p><strong>Prayer.GetPrayerLevel</strong> is used to retrieve the prayer level from the prayer tab.</p>
 <section id="example">
 <h3>Example<a class="headerlink" href="#example" title="Permalink to this headline"></a></h3>
-<div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
 <div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span><span class="nb">Writeln</span> <span class="n">Prayer</span><span class="o">.</span><span class="n">GetPrayerLevel</span><span class="o">;</span>
 </pre></div>
 </div>
@@ -208,9 +205,6 @@
 <p>Attempts to open the prayer tab.</p>
 <section id="id1">
 <h3>Example<a class="headerlink" href="#id1" title="Permalink to this headline"></a></h3>
-<div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
 <div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span><span class="n">Prayer</span><span class="o">.</span><span class="n">Open</span><span class="o">;</span>
 </pre></div>
 </div>
@@ -245,9 +239,6 @@
 -1 is returned if there’s no result.</p>
 <section id="id2">
 <h3>Example<a class="headerlink" href="#id2" title="Permalink to this headline"></a></h3>
-<div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
 <div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span><span class="nb">WriteLn</span><span class="p">(</span><span class="s">&#39;Mouse is hovering prayer &#39;</span><span class="o">,</span> <span class="n">Prayer</span><span class="o">.</span><span class="n">PointToPrayer</span><span class="p">(</span><span class="n">Mouse</span><span class="o">.</span><span class="n">Position</span><span class="p">))</span><span class="o">;</span>
 </pre></div>
 </div>
@@ -262,9 +253,6 @@
 <p>Hovers the specified prayer.</p>
 <section id="id3">
 <h3>Example<a class="headerlink" href="#id3" title="Permalink to this headline"></a></h3>
-<div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
 <div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span><span class="n">Prayer</span><span class="o">.</span><span class="n">MouseOver</span><span class="p">(</span><span class="n">ERSPrayer</span><span class="o">.</span><span class="n">PROTECT_FROM_MELEE</span><span class="p">)</span><span class="o">;</span>
 </pre></div>
 </div>
@@ -279,9 +267,6 @@
 <p>Returns true if we have enough level and have unlocked the specified prayer.</p>
 <section id="id4">
 <h3>Example<a class="headerlink" href="#id4" title="Permalink to this headline"></a></h3>
-<div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
 <div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span><span class="nb">WriteLn</span> <span class="n">Prayer</span><span class="o">.</span><span class="n">CanActivate</span><span class="p">(</span><span class="n">ERSPrayer</span><span class="o">.</span><span class="n">PROTECT_FROM_MELEE</span><span class="p">)</span><span class="o">;</span>
 </pre></div>
 </div>
@@ -304,9 +289,6 @@
 <p>Returns true if the specified prayer is active right now.</p>
 <section id="id5">
 <h3>Example<a class="headerlink" href="#id5" title="Permalink to this headline"></a></h3>
-<div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
 <div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span><span class="nb">WriteLn</span> <span class="n">Prayer</span><span class="o">.</span><span class="n">IsPrayerActive</span><span class="p">(</span><span class="n">ERSPrayer</span><span class="o">.</span><span class="n">SMITE</span><span class="p">)</span><span class="o">;</span>
 </pre></div>
 </div>
@@ -337,9 +319,6 @@
 <p>Attempts to activate the specified prayer.</p>
 <section id="id6">
 <h3>Example<a class="headerlink" href="#id6" title="Permalink to this headline"></a></h3>
-<div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
 <div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span><span class="n">Prayer</span><span class="o">.</span><span class="n">ActivatePrayer</span><span class="p">(</span><span class="n">ERSPrayer</span><span class="o">.</span><span class="n">PROTECT_FROM_MELEE</span><span class="p">)</span><span class="o">;</span>
 </pre></div>
 </div>
@@ -354,9 +333,6 @@
 <p>Attempts to activate the several prayers.</p>
 <section id="id8">
 <h3>Example<a class="headerlink" href="#id8" title="Permalink to this headline"></a></h3>
-<div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
 <div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span><span class="n">Prayer</span><span class="o">.</span><span class="n">ActivatePrayer</span><span class="p">([</span><span class="n">ERSPrayer</span><span class="o">.</span><span class="n">PROTECT_FROM_MELEE</span><span class="o">,</span> <span class="n">ERSPrayer</span><span class="o">.</span><span class="n">PIETY</span><span class="p">])</span><span class="o">;</span>
 </pre></div>
 </div>
@@ -413,9 +389,6 @@
 <p>Attempts to open the quick prayers.</p>
 <section id="id9">
 <h3>Example<a class="headerlink" href="#id9" title="Permalink to this headline"></a></h3>
-<div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
 <div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span><span class="n">QuickPrayer</span><span class="o">.</span><span class="n">Open</span><span class="o">;</span>
 </pre></div>
 </div>
@@ -438,9 +411,6 @@
 <p>Attempts to close the quick prayers.</p>
 <section id="id10">
 <h3>Example<a class="headerlink" href="#id10" title="Permalink to this headline"></a></h3>
-<div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
 <div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span><span class="n">QuickPrayers</span><span class="o">.</span><span class="n">Close</span><span class="o">;</span>
 </pre></div>
 </div>
@@ -455,9 +425,6 @@
 <p>Returns true if the specified quick prayer is selected.</p>
 <section id="id11">
 <h3>Example<a class="headerlink" href="#id11" title="Permalink to this headline"></a></h3>
-<div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
 <div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span><span class="nb">WriteLn</span> <span class="n">QuickPrayers</span><span class="o">.</span><span class="n">IsPrayerSelected</span><span class="p">(</span><span class="n">ERSPrayer</span><span class="o">.</span><span class="n">PROTECT_FROM_MAGIC</span><span class="p">)</span><span class="o">;</span>
 </pre></div>
 </div>
@@ -472,9 +439,6 @@
 <p>Returns an array of all selected quick prayers</p>
 <section id="id12">
 <h3>Example<a class="headerlink" href="#id12" title="Permalink to this headline"></a></h3>
-<div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
 <div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span><span class="nb">WriteLn</span> <span class="n">QuickPrayers</span><span class="o">.</span><span class="n">GetSelectedPrayers</span><span class="o">;</span>
 </pre></div>
 </div>
@@ -492,9 +456,6 @@
 <p>Attempts to select the specified quick prayer/prayers.</p>
 <section id="id13">
 <h3>Example<a class="headerlink" href="#id13" title="Permalink to this headline"></a></h3>
-<div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
 <div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span><span class="n">QuickPrayers</span><span class="o">.</span><span class="n">SelectPrayer</span><span class="p">(</span><span class="n">ERSPrayer</span><span class="o">.</span><span class="n">PROTECT_ITEM</span><span class="p">)</span><span class="o">;</span>
 </pre></div>
 </div>
@@ -521,9 +482,6 @@
 <p><strong>Minimap.GetPrayerLevel</strong> is used to retrieve the prayer level from the minimap orb.</p>
 <section id="id14">
 <h3>Example<a class="headerlink" href="#id14" title="Permalink to this headline"></a></h3>
-<div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
 <div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span><span class="nb">Writeln</span> <span class="n">Minimap</span><span class="o">.</span><span class="n">GetPrayerLevel</span><span class="o">;</span>
 </pre></div>
 </div>
@@ -538,9 +496,6 @@
 <p><strong>Minimap.IsPrayerEnabled</strong> is used to retrieve the quick prayer state (enabled or disabled).</p>
 <section id="id15">
 <h3>Example<a class="headerlink" href="#id15" title="Permalink to this headline"></a></h3>
-<div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
 <div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span><span class="nb">Writeln</span> <span class="n">Minimap</span><span class="o">.</span><span class="n">IsPrayerEnabled</span><span class="o">;</span>
 </pre></div>
 </div>
@@ -555,9 +510,6 @@
 <p><strong>Minimap.EnablePrayer</strong> is used to enable quick prayers.</p>
 <section id="id16">
 <h3>Example<a class="headerlink" href="#id16" title="Permalink to this headline"></a></h3>
-<div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
 <div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span><span class="n">Minimap</span><span class="o">.</span><span class="n">EnablePrayer</span><span class="o">;</span>
 </pre></div>
 </div>
@@ -572,9 +524,6 @@
 <p><strong>Minimap.DisablePrayer</strong> is used to disable quick prayers.</p>
 <section id="id17">
 <h3>Example<a class="headerlink" href="#id17" title="Permalink to this headline"></a></h3>
-<div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
 <div class="highlight-pascal notranslate"><div class="highlight"><pre><span></span><span class="n">Minimap</span><span class="o">.</span><span class="n">DisablePrayer</span><span class="o">;</span>
 </pre></div>
 </div>

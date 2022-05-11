@@ -44,8 +44,6 @@ Example
 -------
 .. code-block:: pascal  
 
-.. code-block:: pascal
-
   WriteLn Magic.IsOpen;
 
 
@@ -62,8 +60,6 @@ Attempts to open the magic tab.
 Example
 -------
 .. code-block:: pascal  
-
-.. code-block:: pascal
 
   Magic.Open;
 
@@ -82,8 +78,6 @@ Example
 -------
 .. code-block:: pascal  
 
-.. code-block:: pascal
-
   WriteLn Magic.GetSpellBook;
 
 
@@ -100,8 +94,6 @@ Returns true if we are using the specified spell book.
 Example
 -------
 .. code-block:: pascal  
-
-.. code-block:: pascal
 
   WriteLn Magic.IsSpellBook(ERSSpellBook.LUNAR);
 
@@ -142,8 +134,6 @@ Example
 -------
 .. code-block:: pascal  
 
-.. code-block:: pascal
-
   Magic.MouseSpell(ERSSpell.HIGH_LEVEL_ALCHEMY, MOUSE_LEFT);
 
 
@@ -160,8 +150,6 @@ Returns true if we can activate the spell (we have runes, level and the spell un
 Example
 -------
 .. code-block:: pascal  
-
-.. code-block:: pascal
 
   Magic.CanActivate(ERSSpell.HIGH_LEVEL_ALCHEMY);
 
@@ -180,8 +168,6 @@ Example
 -------
 .. code-block:: pascal  
 
-.. code-block:: pascal
-
   Magic.IsSpellSelected(ERSSpell.ICE_BARRAGE);
 
 
@@ -199,8 +185,6 @@ Example
 -------
 .. code-block:: pascal  
 
-.. code-block:: pascal
-
   WriteLn Magic.GetSelectedSpell;
 
 
@@ -217,8 +201,6 @@ Attempts to cast the specified spell.
 Example
 -------
 .. code-block:: pascal  
-
-.. code-block:: pascal
 
   Magic.CastSpell(ERSSpell.LOW_LEVEL_ALCHEMY);
 
