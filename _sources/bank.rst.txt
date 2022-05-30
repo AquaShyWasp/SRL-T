@@ -68,6 +68,63 @@ Example
 
 ------------
 
+Bank.CloseSearch
+~~~~~~~~~~~~~~~~
+.. code-block:: pascal
+
+ function TRSBank.CloseSearch: Boolean;
+
+Closes the bank search if it's open.
+
+Example
+-------
+.. code-block:: pascal  
+  
+  Bank.Search('logs'); // Search for logs
+  Wait(1000);
+  Bank.CloseSearch();
+
+
+------------
+
+Bank.FindItemBoundaries
+~~~~~~~~~~~~~~~~~~~~~~~
+.. code-block:: pascal
+
+ function TRSBank.FindItemBoundaries: TBoxArray;
+
+Finds item boundaries. This is an internal function used to retrieve the boxes we
+search for items in.
+
+Example
+-------
+.. code-block:: pascal  
+  
+  Boxes := Self.FindItemBoundaries();
+  WriteLn ItemFinder.Find(Item, Boxes);
+
+
+------------
+
+Bank.Open
+~~~~~~~~~
+.. code-block:: pascal
+
+ function TRSBank.Open(P: TPoint): Boolean;
+
+Function to open a bank at a specified **P** TPoint.
+This function will move the mouse to **P** and if the uptext matches the bank or a banker uptext it will open the bank.
+
+Example
+-------
+.. code-block:: pascal  
+  
+  P := CustomBankFinderFunction();
+  Bank.Open(P);
+
+
+------------
+
 Bank.CountTabs
 ~~~~~~~~~~~
 .. code-block:: pascal
