@@ -20,6 +20,14 @@ Walker
   {$I URL(https://raw.githubusercontent.com/Torwent/SRL/cloud/osr/walker/webgraph.simba)}
   {$I URL(https://raw.githubusercontent.com/Torwent/SRL/cloud/osr/walker/world.simba)}
   {$I URL(https://raw.githubusercontent.com/Torwent/SRL/cloud/osr/walker/zeah.simba)}
+
+  begin
+    if not FileExists(IncludePath + 'SRL\osr\walker\maps\world.png') then
+      GetHTTPPageEx(httpClient, 'https://raw.githubusercontent.com/Torwent/SRL/cloud/osr/walker/maps/world.png', IncludePath + 'SRL\osr\walker\maps\world.png');
+
+    if not FileExists(IncludePath + 'SRL\osr\walker\maps\zeah.png') then
+      GetHTTPPageEx(httpClient, 'https://raw.githubusercontent.com/Torwent/SRL/cloud/osr/walker/maps/zeah.png', IncludePath + 'SRL\osr\walker\maps\zeah.png');
+  end;
 {$ENDIF}
 
 // not a const, allow people to edit.
