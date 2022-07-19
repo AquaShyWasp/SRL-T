@@ -3,7 +3,31 @@
   {$I SRL/osr.simba}
 {$ENDIF}
 
-{$loadlib ../plugins/libsimpleocr}
+{$IFDEF SRL_CLOUD}
+  {$IFHASLIB ../plugins/libsimpleocr}
+    {$loadlib ../plugins/libsimpleocr}
+  {$ELSE}
+    {$IFNDEF NEEDS_RESTART}{$DEFINE NEEDS_RESTART}{$ENDIF}
+    begin
+      if not FileExists({$MACRO LIBPATH(../plugins/libsimpleocr)}) then
+        GetHTTPPageEx(httpClient,
+          'https://raw.githubusercontent.com/Torwent/SRL/plugins/' + ExtractFileName({$MACRO LIBPATH(../plugins/libsimpleocr)}),
+          {$MACRO LIBPATH(../plugins/libsimpleocr)};
+    end;
+  {$ENDIF}
+
+  begin
+    if not DirectoryExists({$macro CURRENT_DIRECTORY} + '/../fonts/') then
+    begin
+      GetHTTPPageEx(httpClient,
+        'https://raw.githubusercontent.com/Torwent/SRL/fonts.zip'),
+        {$macro CURRENT_DIRECTORY} + '/../fonts/';
+        UnZipFile({$macro CURRENT_DIRECTORY} + '/../fonts/fonts.zip', {$macro CURRENT_DIRECTORY} + '/../fonts/');
+    end;
+  end;
+{$ELSE}
+  {$loadlib ../plugins/libsimpleocr}
+{$ENDIF}
 
 const
   RS_FONT_PATH = {$macro CURRENT_DIRECTORY} + '/../fonts/';

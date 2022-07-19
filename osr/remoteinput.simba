@@ -1,4 +1,18 @@
-{$loadlib SRL/plugins/libremoteinput}
+{$IFDEF SRL_CLOUD}
+  {$IFHASLIB ../plugins/libremoteinput}
+    {$loadlib ../plugins/libremoteinput}
+  {$ELSE}
+    {$IFNDEF NEEDS_RESTART}{$DEFINE NEEDS_RESTART}{$ENDIF}
+    begin
+      if not FileExists({$MACRO LIBPATH(../plugins/libremoteinput)}) then
+        GetHTTPPageEx(httpClient,
+          'https://raw.githubusercontent.com/Torwent/SRL/plugins/' + ExtractFileName({$MACRO LIBPATH(../plugins/libremoteinput)}),
+          {$MACRO LIBPATH(../plugins/libremoteinput)};
+    end;
+  {$ENDIF}
+{$ELSE}
+  {$loadlib ../plugins/libremoteinput}
+{$ENDIF}
 
 type
   TRemoteInput = record(TSRLBaseRecord)
@@ -30,7 +44,7 @@ begin
   
     Self.EIOS := EIOS_PairClient(Self.PID);
     if (Self.EIOS <> nil) then
-      SetEIOSTarget({$MACRO LIBPATH(SRL/plugins/libremoteinput)}, ToString(Self.PID));
+      SetEIOSTarget({$MACRO LIBPATH(../plugins/libremoteinput)}, ToString(Self.PID));
   except
     Self.Fatal(GetExceptionMessage());
   end;

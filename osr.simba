@@ -215,6 +215,10 @@ end;
   {$HINTS ON}
 {$ENDIF}
 
+{$IFDEF NEEDS_RESTART}
+  TerminateScript('Some files were downloaded and you need to restart the script!');
+{$ENDIF}
+
 procedure TSRL.Setup; override; // Called first. Don't setup multiple times.
 begin
   if Self.IsSetup then

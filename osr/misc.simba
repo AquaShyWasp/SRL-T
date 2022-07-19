@@ -118,6 +118,3 @@ begin
 
   Result := FloatToStr(Round(f,dec)) + (['','K','M','B','T'])[i]
 end;
-
-
-
