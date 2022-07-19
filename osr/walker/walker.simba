@@ -18,8 +18,8 @@ Walker
   {$I zeah.graph}
 {$ELSE}
   {$I URL(https://raw.githubusercontent.com/Torwent/SRL/cloud/osr/walker/webgraph.simba)}
-  {$I URL(https://raw.githubusercontent.com/Torwent/SRL/cloud/osr/walker/world.simba)}
-  {$I URL(https://raw.githubusercontent.com/Torwent/SRL/cloud/osr/walker/zeah.simba)}
+  {$I URL(https://raw.githubusercontent.com/Torwent/SRL/cloud/osr/walker/world.graph)}
+  {$I URL(https://raw.githubusercontent.com/Torwent/SRL/cloud/osr/walker/zeah.graph)}
 
   begin
     if not FileExists(IncludePath + 'SRL\osr\walker\maps\world.png') then

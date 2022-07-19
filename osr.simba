@@ -14,8 +14,15 @@
   {$DEFINE SRL_CLOUD}
   var
     httpClient: Int32;
+
+  procedure freeClient;
+  begin
+    FreeHTTPClient(httpClient);
+  end;
+
   begin
     httpClient := InitializeHTTPClient(True);
+    AddOnTerminate(@freeClient);
   end;
   {$I URL(https://raw.githubusercontent.com/Torwent/SRL/cloud/utils.simba)}
 {$ENDIF}
@@ -202,10 +209,6 @@ end;
   {$ELSE}{$ENDIF}
   {$ELSE}{$ENDIF}
   {$ELSE}{$ENDIF}
-
-begin
-  FreeHTTPClient(httpClient);
-end;
 {$ENDIF}
 
 {$IFDEF SRL_HAD_HINTS}

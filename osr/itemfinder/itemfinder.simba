@@ -8,6 +8,16 @@ Item Finder
   {$I SRL/osr.simba}
 {$ENDIF}
 
+{$IFDEF SRL_CLOUD}
+  begin
+    if not FileExists(IncludePath + 'SRL/osr/itemfinder/item-images.zip') then
+      GetHTTPPageEx(httpClient, 'https://raw.githubusercontent.com/Torwent/SRL/osr/itemfinder/item-images.zip', IncludePath + 'SRL/osr/itemfinder/item-images.zip');
+
+    if not FileExists(IncludePath + 'C:\Simba\Includes\SRL/osr/itemfinder/item-names') then
+      GetHTTPPageEx(httpClient, 'https://raw.githubusercontent.com/Torwent/SRL/osr/itemfinder/item-names', IncludePath + 'SRL/osr/itemfinder/item-names');
+  end;
+{$ENDIF}
+
 const
   ITEM_FINDER_IMAGES_VERSION = '4'; // Inc if images have changed
   ITEM_FINDER_IMAGES_ZIP     = {$macro CURRENT_DIRECTORY} + '/item-images.zip';
