@@ -6,6 +6,42 @@
 {$IFDEF SRL_CLOUD}
   {$IFHASLIB ../plugins/libsimpleocr}
     {$loadlib ../plugins/libsimpleocr}
+
+    begin
+      if not DirectoryExists({$macro CURRENT_DIRECTORY} + '/../fonts/') then
+      begin
+        GetHTTPPageEx(httpClient,
+          'https://raw.githubusercontent.com/Torwent/SRL/fonts.zip',
+          {$macro CURRENT_DIRECTORY} + '/../fonts.zip');
+
+          UnZipFile({$macro CURRENT_DIRECTORY} + '/../fonts.zip', {$macro CURRENT_DIRECTORY} + '/../fonts/');
+
+        TerminateScript('We are setting up things, you need to restart the script.');
+      end;
+    end;
+
+    const
+      RS_FONT_PATH = {$macro CURRENT_DIRECTORY} + '/../fonts/';
+
+    var
+      RS_FONT_PLAIN_11: TFontSet;
+      RS_FONT_PLAIN_12: TFontSet;
+      RS_FONT_BOLD_12: TFontSet;
+      RS_FONT_BOLD_12_SHADOW: TFontSet;
+      RS_FONT_QUILL_8: TFontSet;
+      RS_FONT_QUILL: TFontSet;
+
+      OCR: TSimpleOCR;
+
+    begin
+      RS_FONT_PLAIN_11.Load(RS_FONT_PATH + 'Plain 11');
+      RS_FONT_PLAIN_12.Load(RS_FONT_PATH + 'Plain 12');
+      RS_FONT_BOLD_12.Load(RS_FONT_PATH + 'Bold 12');
+      RS_FONT_BOLD_12_SHADOW.Load(RS_FONT_PATH + 'Bold 12 Shadow');
+      RS_FONT_QUILL_8.Load(RS_FONT_PATH + 'Quill 8');
+      RS_FONT_QUILL.Load(RS_FONT_PATH + 'Quill');
+    end;
+
   {$ELSE}
     {$IFNDEF NEEDS_RESTART}{$DEFINE NEEDS_RESTART}{$ENDIF}
     begin
@@ -15,41 +51,29 @@
           {$MACRO LIBPATH(../plugins/libsimpleocr)});
     end;
   {$ENDIF}
-
-  begin
-    if not DirectoryExists({$macro CURRENT_DIRECTORY} + '/../fonts/') then
-    begin
-      GetHTTPPageEx(httpClient,
-        'https://raw.githubusercontent.com/Torwent/SRL/fonts.zip',
-        {$macro CURRENT_DIRECTORY} + '/../fonts.zip');
-
-        UnZipFile({$macro CURRENT_DIRECTORY} + '/../fonts.zip', {$macro CURRENT_DIRECTORY} + '/../fonts/');
-
-      TerminateScript('We are setting up things, you need to restart the script.');
-    end;
-  end;
 {$ELSE}
   {$loadlib ../plugins/libsimpleocr}
+  const
+    RS_FONT_PATH = {$macro CURRENT_DIRECTORY} + '/../fonts/';
+
+  var
+    RS_FONT_PLAIN_11: TFontSet;
+    RS_FONT_PLAIN_12: TFontSet;
+    RS_FONT_BOLD_12: TFontSet;
+    RS_FONT_BOLD_12_SHADOW: TFontSet;
+    RS_FONT_QUILL_8: TFontSet;
+    RS_FONT_QUILL: TFontSet;
+
+    OCR: TSimpleOCR;
+
+  begin
+    RS_FONT_PLAIN_11.Load(RS_FONT_PATH + 'Plain 11');
+    RS_FONT_PLAIN_12.Load(RS_FONT_PATH + 'Plain 12');
+    RS_FONT_BOLD_12.Load(RS_FONT_PATH + 'Bold 12');
+    RS_FONT_BOLD_12_SHADOW.Load(RS_FONT_PATH + 'Bold 12 Shadow');
+    RS_FONT_QUILL_8.Load(RS_FONT_PATH + 'Quill 8');
+    RS_FONT_QUILL.Load(RS_FONT_PATH + 'Quill');
+  end;
 {$ENDIF}
 
-const
-  RS_FONT_PATH = {$macro CURRENT_DIRECTORY} + '/../fonts/';
 
-var
-  RS_FONT_PLAIN_11: TFontSet;
-  RS_FONT_PLAIN_12: TFontSet;
-  RS_FONT_BOLD_12: TFontSet;
-  RS_FONT_BOLD_12_SHADOW: TFontSet;
-  RS_FONT_QUILL_8: TFontSet;
-  RS_FONT_QUILL: TFontSet;
-
-  OCR: TSimpleOCR;
-
-begin
-  RS_FONT_PLAIN_11.Load(RS_FONT_PATH + 'Plain 11');
-  RS_FONT_PLAIN_12.Load(RS_FONT_PATH + 'Plain 12');
-  RS_FONT_BOLD_12.Load(RS_FONT_PATH + 'Bold 12');
-  RS_FONT_BOLD_12_SHADOW.Load(RS_FONT_PATH + 'Bold 12 Shadow');
-  RS_FONT_QUILL_8.Load(RS_FONT_PATH + 'Quill 8');
-  RS_FONT_QUILL.Load(RS_FONT_PATH + 'Quill');
-end;
