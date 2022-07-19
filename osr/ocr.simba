@@ -12,7 +12,7 @@
       if not FileExists({$MACRO LIBPATH(../plugins/libsimpleocr)}) then
         GetHTTPPageEx(httpClient,
           'https://raw.githubusercontent.com/Torwent/SRL/plugins/' + ExtractFileName({$MACRO LIBPATH(../plugins/libsimpleocr)}),
-          {$MACRO LIBPATH(../plugins/libsimpleocr)};
+          {$MACRO LIBPATH(../plugins/libsimpleocr)});
     end;
   {$ENDIF}
 
@@ -20,9 +20,10 @@
     if not DirectoryExists({$macro CURRENT_DIRECTORY} + '/../fonts/') then
     begin
       GetHTTPPageEx(httpClient,
-        'https://raw.githubusercontent.com/Torwent/SRL/fonts.zip'),
-        {$macro CURRENT_DIRECTORY} + '/../fonts/';
-        UnZipFile({$macro CURRENT_DIRECTORY} + '/../fonts/fonts.zip', {$macro CURRENT_DIRECTORY} + '/../fonts/');
+        'https://raw.githubusercontent.com/Torwent/SRL/fonts.zip',
+        {$macro CURRENT_DIRECTORY} + '/../fonts.zip');
+
+        UnZipFile({$macro CURRENT_DIRECTORY} + '/../fonts.zip', {$macro CURRENT_DIRECTORY} + '/../fonts/');
     end;
   end;
 {$ELSE}

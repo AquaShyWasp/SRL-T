@@ -7,7 +7,7 @@
       if not FileExists({$MACRO LIBPATH(../plugins/libremoteinput)}) then
         GetHTTPPageEx(httpClient,
           'https://raw.githubusercontent.com/Torwent/SRL/plugins/' + ExtractFileName({$MACRO LIBPATH(../plugins/libremoteinput)}),
-          {$MACRO LIBPATH(../plugins/libremoteinput)};
+          {$MACRO LIBPATH(../plugins/libremoteinput)});
     end;
   {$ENDIF}
 {$ELSE}
