@@ -24,6 +24,8 @@
         {$macro CURRENT_DIRECTORY} + '/../fonts.zip');
 
         UnZipFile({$macro CURRENT_DIRECTORY} + '/../fonts.zip', {$macro CURRENT_DIRECTORY} + '/../fonts/');
+
+      TerminateScript('We are setting up things, you need to restart the script.');
     end;
   end;
 {$ELSE}
