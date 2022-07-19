@@ -22,9 +22,7 @@ Methods to interact with the mouse.
     {$IFNDEF NEEDS_RESTART}{$DEFINE NEEDS_RESTART}{$ENDIF}
     begin
       if not FileExists({$MACRO LIBPATH(../plugins/libasyncmouse)}) then
-        GetHTTPPageEx(httpClient,
-          'https://raw.githubusercontent.com/Torwent/SRL/plugins/' + ExtractFileName({$MACRO LIBPATH(../plugins/libasyncmouse)}),
-          {$MACRO LIBPATH(../plugins/libasyncmouse)});
+        GetHTTPPageEx(httpClient, 'https://raw.githubusercontent.com/Torwent/SRL/plugins/' + ExtractFileName({$MACRO LIBPATH(../plugins/libasyncmouse)}), {$MACRO LIBPATH(../plugins/libasyncmouse)});
     end;
   {$ENDIF}
 {$ELSE}
