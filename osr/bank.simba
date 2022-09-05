@@ -838,6 +838,14 @@ begin
   Result := Self.FindItem(Item, B);
 end;
 
+//DEPRECATED AVOID USING THIS!
+function TRSBank.FindItem(Item: TRSItem): Boolean;
+var
+  B: TBox;
+begin
+  Result := Self.FindItem(Item, B);
+end;
+
 
 function TRSBank.CountItem(Item: TRSItem): Int32;
 begin

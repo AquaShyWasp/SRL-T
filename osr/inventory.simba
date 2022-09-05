@@ -487,14 +487,6 @@ begin
   Result := Length(Slots) > 0;
 end;
 
-function TRSInventory.ContainsAny(Items: TRSItemArray): Boolean;
-var
-  Slots: TIntegerArray;
-begin
-  Result := Self.FindItems(Items, Slots);
-end;
-
-
 function TRSInventory.FindItem(Item: TRSItem; out Slots: TIntegerArray): Boolean;
 begin
   Result := Self.FindItems([Item], Slots);
@@ -502,12 +494,19 @@ end;
 
 function TRSInventory.FindItem(Item: TRSItem; out Slot: Int32): Boolean; overload;
 var
+  i: Int32;
+  tmp, TBA: TBoxArray;
   Slots: TIntegerArray;
 begin
   if not Self.Open() then
     Exit;
 
-  Slots := ItemFinder.Find(Item, Self.GetSlotBoxes(), 1);
+  TBA := Self.GetSlotBoxes();
+  for i:=0 to High(TBA) do
+    if Self.IsSlotUsed(TBA[i]) then
+      tmp += TBA[i];
+
+  Slots := ItemFinder.Find(Item, tmp, 1);
   
   if Length(Slots) > 0 then
   begin
@@ -517,12 +516,20 @@ begin
   end;
 end;
 
-//for use without having to pass extra parameters.
-function TRSInventory.ContainsItem(Item: TRSItem): Boolean;
+
+function TRSInventory.ContainsAny(Items: TRSItemArray): Boolean;
 var
   Slots: TIntegerArray;
 begin
-  Result := Self.FindItems([Item], Slots);
+  Result := Self.FindItems(Items, Slots);
+end;
+
+//for use without having to pass extra parameters.
+function TRSInventory.ContainsItem(Item: TRSItem): Boolean;
+var
+  Slot: TIntegerArray;
+begin
+  Result := Self.FindItem(Item, Slot);
 end;
 
 function TRSInventory.ContainsAll(items: TRSItemArray): Boolean;
@@ -534,6 +541,25 @@ begin
     if not Self.ContainsItem(item) then
       Exit(False);
 end;
+
+
+//DEPRECATED! AVOID USING THIS
+function TRSInventory.FindItems(Items: TRSItemArray): Boolean; overload;
+var
+  Slots: TIntegerArray;
+begin
+  Result := Self.FindItems(Items, Slots);
+end;
+
+//DEPRECATED! AVOID USING THIS
+function TRSInventory.FindItem(Item: TRSItem): Boolean; overload;
+var
+  Slots: TIntegerArray;
+begin
+  Result := Self.FindItems([Item], Slots);
+end;
+
+
 
 function TRSInventory.CountItem(Item: TRSItem): Int32;
 var
