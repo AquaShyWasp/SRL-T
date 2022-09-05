@@ -839,7 +839,7 @@ begin
 end;
 
 //DEPRECATED AVOID USING THIS!
-function TRSBank.FindItem(Item: TRSItem): Boolean;
+function TRSBank.FindItem(Item: TRSItem): Boolean; overload;
 var
   B: TBox;
 begin
