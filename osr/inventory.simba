@@ -507,7 +507,7 @@ begin
   if SRL.FindColors(tpa, CTS1(1118740, 35), Self.Bounds().Expand(-5)) = 0 then
     Exit;
 
-  atpa := tpa.Cluster(2);
+  atpa := tpa.Cluster(3);
   atpa.FilterSize(5, __GT__);
 
   Result := atpa.Len();
@@ -527,7 +527,7 @@ Example
 *)
 function TRSInventory.IsFull(): Boolean;
 begin
-  Result := Self.Count() = 28;
+  Result := Self.Count() >= 28;
 end;
 
 (*
